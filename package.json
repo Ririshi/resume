@@ -12,7 +12,7 @@
     "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
     "prepare": "husky",
     "lint": "prettier --write --ignore-unknown",
-    "favicons": "pnpx realfavicon generate src/assets/images/avatar.png favicon-settings.json favicon-output.json src/assets/images/favicons"
+    "build:favicons": "pnpx realfavicon generate src/assets/images/avatar.png favicon-settings.json favicon-output.json src/assets/images/favicons"
   },
   "keywords": [],
   "author": "",
