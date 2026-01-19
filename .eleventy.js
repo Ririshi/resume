@@ -3,7 +3,7 @@ import { join, basename } from "node:path";
 
 export default async function (eleventyConfig) {
   eleventyConfig.addShortcode("year", () => `${new Date().getFullYear()}`);
-  eleventyConfig.addPassthroughCopy("src/assets/images");
+  eleventyConfig.addPassthroughCopy("src/assets/images/avatar.png");
   eleventyConfig.addPassthroughCopy({
     "./src/site.webmanifest": "site.webmanifest",
   });
@@ -13,7 +13,7 @@ export default async function (eleventyConfig) {
     const resumesDir = join("src", "resumes", "_data");
     return await Promise.all(
       (await readdir(resumesDir))
-        // skip filenames starting with a period
+        // Skip filenames starting with a period
         .filter((ent) => !ent.startsWith("."))
         .map(async (file) => {
           const name = basename(file, ".json");
