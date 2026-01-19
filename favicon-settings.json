@@ -1,0 +1,32 @@
+{
+  "icon": {
+    "desktop": {
+      "regularIconTransformation": {
+        "type": "background",
+        "backgroundColor": "#ffffff",
+        "backgroundRadius": 0.5,
+        "imageScale": 1
+      },
+      "darkIconType": "none"
+    },
+    "touch": {
+      "transformation": {
+        "type": "none"
+      },
+      "appTitle": null
+    },
+    "webAppManifest": {
+      "transformation": {
+        "type": "background",
+        "backgroundColor": "#ffffff",
+        "backgroundRadius": 0,
+        "imageScale": 1
+      },
+      "backgroundColor": "#3e1d06",
+      "name": "Andele Swierstra resume",
+      "shortName": "Swierstra",
+      "themeColor": "#ffffff"
+    }
+  },
+  "path": "/assets/images/favicons/"
+}

@@ -1,0 +1,14 @@
+---
+pagination:
+  data: collections.resumes
+  alias: resume
+  size: 1
+permalink: "/{% if resume.name != 'default' %}{{ resume.name | slugify }}/{% endif %}"
+layout: layout/base.njk
+keywords: resume, cv, about, personal, profile, portfolio, andele swierstra
+description: Andele Swierstra's resume
+---
+{# This Content will be rendered inside the `src/_includes/partials/_about.njk` file. #}
+<p class="mb-4">Hey there, I'm Andele!</p>
+<p class="mb-4">I am a flexible software developer with broad experience in different programming languages and environments. I also like learning new technologies and sometimes contribute to open source projects.</p>
+<p>I have worked on a variety of projects, but I'm strongest in data and back-end services. I value writing efficient and clean code, based on the latest best practices. I automate my workflow as much as possible, so I can focus on developing software instead of dealing with mundane repetitive tasks.</p>

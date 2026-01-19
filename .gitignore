@@ -1,0 +1,5 @@
+# Node modules and output
+node_modules
+_site
+src/assets/images/favicons
+favicon-output.json

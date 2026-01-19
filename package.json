@@ -1,0 +1,40 @@
+{
+  "name": "resume-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm-run-all -p dev:*",
+    "build": "run-s build:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --watch --postcss",
+    "build:11ty": "eleventy",
+    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
+    "prepare": "husky",
+    "lint": "prettier --write --ignore-unknown",
+    "favicons": "pnpx realfavicon generate src/assets/images/avatar.png favicon-settings.json favicon-output.json src/assets/images/favicons"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "packageManager": "pnpm@10.28.0",
+  "type": "module",
+  "engines": {
+    "node": ">=24.12.0 <25.0.0",
+    "pnpm": ">=10.28.0 <11.0.0"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^3.1.8",
+    "autoprefixer": "^10.4.16",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.4.32",
+    "prettier": "^3.7.4",
+    "tailwindcss": "^3.4.0"
+  },
+  "lint-staged": {
+    "**/*": "pnpm lint ."
+  }
+}
