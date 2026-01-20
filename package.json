@@ -7,12 +7,15 @@
     "start": "npm-run-all -p dev:*",
     "build": "run-s build:*",
     "dev:11ty": "eleventy --serve",
-    "dev:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --watch --postcss",
-    "build:favicons": "pnpx realfavicon generate src/assets/images/avatar.png favicon-settings.json favicon-output.json _site/assets/images/favicons",
+    "dev:css": "pnpm run css -- --watch",
+    "dev:favicons": "pnpm run favicons",
     "build:11ty": "eleventy",
-    "build:css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
-    "prepare": "husky",
-    "lint": "prettier --write --ignore-unknown"
+    "build:css": "pnpm run css",
+    "build:favicons": "pnpm run favicons",
+    "css": "tailwindcss -i src/assets/css/tailwind.css -o _site/assets/css/styles.css --postcss",
+    "favicons": "pnpx realfavicon generate src/assets/images/avatar.png favicon-settings.json favicon-output.json _site/assets/images/favicons",
+    "lint": "prettier --write --ignore-unknown",
+    "prepare": "husky"
   },
   "keywords": [],
   "author": "",
@@ -20,7 +23,7 @@
   "packageManager": "pnpm@10.28.0",
   "type": "module",
   "engines": {
-    "node": ">=24.12.0 <25.0.0",
+    "node": ">=24.13.0 <25.0.0",
     "pnpm": ">=10.28.0 <11.0.0"
   },
   "devDependencies": {
